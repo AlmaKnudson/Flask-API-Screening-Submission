@@ -36,7 +36,7 @@ FYI, a thread can currently contain duplicate usernames in a given thread. This 
 
 ## Configuration
 ### What is going on with configuration?
-##### I chose to hard code configuration and secrets as setting up a Secrets Manager (AWS) or Key Vault (Azure) and including a robust configuration module at this stage of the "project" is not a good use of time and resources.
+##### I chose to hard code configuration and secrets in the .env file. The correct approach would be to leverage Secrets Manager (AWS) or Key Vault (Azure) paired with a more robust configuration module.
 
 ## Error Handling Concept
 ### What is the current state of error handling?
