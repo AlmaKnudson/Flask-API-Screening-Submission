@@ -25,7 +25,7 @@ pytest
 Currently, configured to point to an instance of MongoDb running on MS Azure. The temporary username and password will expire in a week, but should be sufficient to play around with a bit.
 
 ## Postman
-The provided postman collection to make calls to the messaging API. Feel free to let loose and have some fun sending messages! 
+Provided is a postman collection to make calls to the messaging API. Feel free to let loose and have some fun sending messages! 
 
 ## Limitations & Potential enhancements
 Threads are restricted to contain between [2-100] users and messages in the thread are restricted to be as long as a Tweet (280 characters).
