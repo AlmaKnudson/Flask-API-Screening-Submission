@@ -1,5 +1,3 @@
-
-
 def test_valid_new_message(message_entity):
     """
     GIVEN a new valid message json
@@ -26,6 +24,37 @@ def test_valid_new_message_with_random_additional_information(message_entity):
     is_valid = message_entity.validate_json(mock_message_json)
     assert is_valid
 
+
+def test_new_empty_message(message_entity):
+    mock_message_json = {
+        "message": "",
+        "username": "bob",
+        "thread_id": "shell"
+    }
+    is_valid = message_entity.validate_json(mock_message_json)
+    assert not is_valid
+
+
+def test_new_message_one_character(message_entity):
+    mock_message_json = {
+        "message": "c",
+        "username": "bob",
+        "thread_id": "shell"
+    }
+    is_valid = message_entity.validate_json(mock_message_json)
+    assert not is_valid
+
+
+def test_new_message_two_characters(message_entity):
+    mock_message_json = {
+        "message": "hi",
+        "username": "bob",
+        "thread_id": "shell"
+    }
+    is_valid = message_entity.validate_json(mock_message_json)
+    assert is_valid
+
+
 def test_new_message_missing_thread_id(message_entity):
     mock_message_json = {
         "message": "This is a message!",
@@ -35,13 +64,14 @@ def test_new_message_missing_thread_id(message_entity):
     is_valid = message_entity.validate_json(mock_message_json)
     assert not is_valid
 
+
 def test_new_message_missing_message(message_entity):
-        mock_message_json = {
-            "thread_id": "5fd10a9f0fcb41725938980e",
-            "username": "bob"
-        }
-        is_valid = message_entity.validate_json(mock_message_json)
-        assert not is_valid
+    mock_message_json = {
+        "thread_id": "5fd10a9f0fcb41725938980e",
+        "username": "bob"
+    }
+    is_valid = message_entity.validate_json(mock_message_json)
+    assert not is_valid
 
 
 def test_new_message_missing_username(message_entity):
@@ -51,6 +81,7 @@ def test_new_message_missing_username(message_entity):
     }
     is_valid = message_entity.validate_json(mock_message_json)
     assert not is_valid
+
 
 def test_new_message_longer_than_280_characters(message_entity):
     mock_message_json = {
@@ -63,6 +94,7 @@ def test_new_message_longer_than_280_characters(message_entity):
     }
     is_valid = message_entity.validate_json(mock_message_json)
     assert is_valid
+
 
 def test_new_message_longer_than_280_characters(message_entity):
     mock_message_json = {

@@ -5,7 +5,7 @@ from jsonschema import validate
 newMessageSchema = {
     "type": "object",
     "properties": {
-        "message": {"type": "string", "maxLength": 280},  # Max message length is the same as a Tweet.
+        "message": {"type": "string", "minLength": 2, "maxLength": 280},  # Max message length is the same as a Tweet.
         "username": {"type": "string"},
         "thread_id": {"type": "string"}
     },

@@ -3,25 +3,27 @@ A simple [Knock Full Stack Screening - Core](https://gist.github.com/marvincolgi
 
 ## Installation
 
-Use the package manager [pip](https://pip.pypa.io/en/stable/) to install foobar.
+Use the package manager [pip](https://pip.pypa.io/en/stable/) to install all dependencies.
 
 ```bash
-pip install foobar
+pip install -r requirements.txt
 ```
 
 ## Tests
+Navigate to the project directory "flaskProject" and run pytest
+```bash
+pytest 
+```
 
 ## Database
+Currently, configured to point to an instance of MongoDb running on MS Azure. The temporary username and password will expire in a week, but should be sufficient to play around with a bit.
 
-```python
-import foobar
-
-foobar.pluralize('word') # returns 'words'
-foobar.pluralize('goose') # returns 'geese'
-foobar.singularize('phenomena') # returns 'phenomenon'
-```
 ## Postman
 The provided postman collection to make calls to the messaging API. Feel free to let loose and have some fun sending messages! 
+
+## Limitations & Potential enhancements
+Threads are restricted to contain between [2-100] users and messages in the thread are restricted to be as long as a Tweet (280 characters).
+FYI, a thread can currently contain duplicate usernames in a given thread. This is a clear area for improvement.
 
 # Architectural Considerations & Design Decisions
 ## Database
@@ -38,11 +40,12 @@ The provided postman collection to make calls to the messaging API. Feel free to
 
 ## Error Handling Concept
 ### What is the current state of error handling?
-##### TODO: Fill out
+##### Honestly, I did not really get around to defining a robust error handling strategy even though this is a must-have in a production level application.
 
 ## Logging
 ### What is logged and when? 
-##### TODO: Consider anonymization of logs
+##### I have logs that rotate after 10mb. While the logging is not really useful with such a tiny application, it provides a great foundation for a production level application. It would also be important to consider anonymization of logs since they contain usernames.
 
 ## Pipeline (CI/CD)
+### This would be nice to setup with more time...
 ##### To be added (due by 01.01.2050)
