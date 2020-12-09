@@ -1,0 +1,16 @@
+[2020-12-09 22:55:39,670] {/Users/alma/PycharmProjects/flaskProject/app/thread/controller.py:19} INFO - Create_thread called with payload: {'users': ['quinn', 'jeff_goldblum']}
+[2020-12-09 22:55:39,671] {/Users/alma/PycharmProjects/flaskProject/app/thread/service.py:16} DEBUG - JSON IS VALID. Will save thread in DB.
+[2020-12-09 22:55:41,790] {/Users/alma/PycharmProjects/flaskProject/app/thread/service.py:18} DEBUG - Inserted Id: %s5fd147db00432fe43ca939b1
+[2020-12-09 22:55:41,791] {/Users/alma/PycharmProjects/flaskProject/app/thread/controller.py:28} DEBUG - Create_thread returning: {'thread_id': '5fd147db00432fe43ca939b1'}
+[2020-12-09 22:56:02,760] {/Users/alma/PycharmProjects/flaskProject/app/thread/controller.py:19} INFO - Create_thread called with payload: {'users': ['quinn', 'jeff_goldblum']}
+[2020-12-09 22:56:02,761] {/Users/alma/PycharmProjects/flaskProject/app/thread/service.py:16} DEBUG - JSON IS VALID. Will save thread in DB.
+[2020-12-09 22:56:03,774] {/Users/alma/PycharmProjects/flaskProject/app/thread/service.py:18} DEBUG - Inserted Id: %s5fd147f247113396eb92091f
+[2020-12-09 22:56:03,775] {/Users/alma/PycharmProjects/flaskProject/app/thread/controller.py:28} DEBUG - Create_thread returning: {'thread_id': '5fd147f247113396eb92091f'}
+[2020-12-09 22:56:20,486] {/Users/alma/PycharmProjects/flaskProject/app/thread/controller.py:19} INFO - Create_thread called with payload: {'users': ['quinn', 'jeff_goldblum']}
+[2020-12-09 22:56:20,487] {/Users/alma/PycharmProjects/flaskProject/app/thread/service.py:16} DEBUG - JSON IS VALID. Will save thread in DB.
+[2020-12-09 22:56:21,503] {/Users/alma/PycharmProjects/flaskProject/app/thread/service.py:18} DEBUG - Inserted Id: %s5fd14804ca5d71265357bebd
+[2020-12-09 22:56:21,503] {/Users/alma/PycharmProjects/flaskProject/app/thread/controller.py:28} DEBUG - Create_thread returning: {'thread_id': '5fd14804ca5d71265357bebd'}
+[2020-12-09 23:06:13,278] {/Users/alma/PycharmProjects/flaskProject/app/thread/controller.py:11} INFO - Create_thread called with payload: {'users': ['quinn', 'jeff_goldblum']}
+[2020-12-09 23:06:13,279] {/Users/alma/PycharmProjects/flaskProject/app/thread/service.py:16} DEBUG - JSON IS VALID. Will save thread in DB.
+[2020-12-09 23:06:14,342] {/Users/alma/PycharmProjects/flaskProject/app/thread/service.py:18} DEBUG - Inserted Id: %s5fd14a55b60a404bc6ed19e2
+[2020-12-09 23:06:14,342] {/Users/alma/PycharmProjects/flaskProject/app/thread/controller.py:20} DEBUG - Create_thread returning: {'thread_id': '5fd14a55b60a404bc6ed19e2'}
