@@ -67,6 +67,6 @@ FYI, a thread can currently contain duplicate usernames in a given thread. This 
 ### Where can I manage them?
 ##### I configured an automated build for this repo using [GitHub Actions](https://github.com/AlmaKnudson/flaskProject/actions/runs/413861131). You can manually trigger a build from GitHub or it will be triggered when you push to the repo. I included a linter (flake8) in the build job to help keep code smells to a minimum. There is a [Knock Task](https://github.com/AlmaKnudson/flaskProject/projects/1#card-51028315) to take a peek at what the linter picked up.
 
-## Pipeline (CI/CD)
+## Pipeline (CI/CD) 
 ### This would be nice to setup with more time... 
 ##### To be added (due by 01.01.2050)
