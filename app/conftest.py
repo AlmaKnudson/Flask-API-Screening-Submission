@@ -1,3 +1,5 @@
+import json
+
 import pytest
 
 from app import create_app
@@ -20,3 +22,22 @@ def test_client():
         with flask_app.app_context():
             yield testing_client  # this is where the testing happens!
 
+
+@pytest.fixture(scope='module')
+def create_test_thread_id(test_client):
+    mock_request_headers = {
+        "Content-Type": "application/json"
+    }
+
+    mock_request_data = {
+        "users": [
+            "quinn",
+            "jeff_goldblum"
+        ]
+    }
+
+    # Create a test client using the Flask application configured for testing
+    response = test_client.post('/thread', data=json.dumps(mock_request_data), headers=mock_request_headers)
+    assert response.status_code == 201
+    data = json.loads(response.data)
+    yield data['thread_id']
