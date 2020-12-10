@@ -26,12 +26,6 @@ def create_message(thread_id, username):
         return {}, 204
 
 
-# {
-#     "messages": [
-#         {"username": "jeff_goldblum", "message": "This is a message!"},
-#         ...
-#     ]
-# }
 @message_thread.route('<thread_id>', methods=['GET'])
 def get_thread(thread_id):
     current_app.logger.info('Get_thread called for thread_id: %s', thread_id)

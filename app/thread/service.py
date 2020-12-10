@@ -1,3 +1,6 @@
+from typing import Optional, Any
+
+from bson import ObjectId
 from flask import current_app
 
 from app.thread.entity import ThreadEntity
@@ -9,7 +12,7 @@ threadsTable = Config.DATABASE["threads"]
 
 class ThreadService:
     @staticmethod
-    def create_thread(json_data):
+    def create_thread(json_data) -> None:
         # this section of code is a candidate for refactoring/consolidation
         is_valid = ThreadEntity.validate_json(json_data)
         if is_valid:
@@ -19,3 +22,7 @@ class ThreadService:
             return result.inserted_id
         else:
             current_app.logger.error("JSON WAS INVALID. Will... idk yet.")
+
+    @staticmethod
+    def get_thread_by_id(thread_id) -> Optional[Any]:
+        return threadsTable.find_one({"_id": ObjectId(thread_id)})

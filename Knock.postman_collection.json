@@ -73,14 +73,14 @@
 					}
 				},
 				"url": {
-					"raw": "localhost:5000/thread/5fd10a9f0fcb41725938980e/bob",
+					"raw": "localhost:5000/thread/5fd2767bfc32224a609097ac/bob",
 					"host": [
 						"localhost"
 					],
 					"port": "5000",
 					"path": [
 						"thread",
-						"5fd10a9f0fcb41725938980e",
+						"5fd2767bfc32224a609097ac",
 						"bob"
 					]
 				}
@@ -110,7 +110,7 @@
 				],
 				"body": {
 					"mode": "raw",
-					"raw": "{\n    \"message\": \"This is a message!\"\n}",
+					"raw": "",
 					"options": {
 						"raw": {
 							"language": "json"
@@ -118,14 +118,14 @@
 					}
 				},
 				"url": {
-					"raw": "localhost:5000/thread/5fd10a9f0fcb41725938980e",
+					"raw": "localhost:5000/thread/5fd2767bfc32224a609097ac",
 					"host": [
 						"localhost"
 					],
 					"port": "5000",
 					"path": [
 						"thread",
-						"5fd10a9f0fcb41725938980e"
+						"5fd2767bfc32224a609097ac"
 					]
 				}
 			},
