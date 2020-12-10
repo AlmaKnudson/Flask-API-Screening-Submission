@@ -1,6 +1,7 @@
 from typing import Optional, Any
 
 from bson import ObjectId
+from bson.errors import InvalidId
 from flask import current_app
 
 from app.thread.entity import ThreadEntity
@@ -25,4 +26,8 @@ class ThreadService:
 
     @staticmethod
     def get_thread_by_id(thread_id) -> Optional[Any]:
-        return threadsTable.find_one({"_id": ObjectId(thread_id)})
+        try:
+            return threadsTable.find_one({"_id": ObjectId(thread_id)})
+        except InvalidId as exception:
+            current_app.logger.debug(f'Invalid id was used ({thread_id})')
+            return None
