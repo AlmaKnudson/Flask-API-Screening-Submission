@@ -6,7 +6,7 @@ A simple [Knock Full Stack Screening - Core](https://gist.github.com/marvincolgi
 Use the package manager [pip](https://pip.pypa.io/en/stable/) to install all dependencies.
 Pip 20.3.1, Python 3.9 and virtualenv on MacOS was used for the development. Please make sure that the pip version is correct before running the commands below:
 
-MacOS/Linux (Terminal) 
+MacOS/Linux (Terminal)  
 ```bash
 git clone https://github.com/AlmaKnudson/flaskProject.git
 cd flaskProject
