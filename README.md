@@ -4,13 +4,24 @@ A simple [Knock Full Stack Screening - Core](https://gist.github.com/marvincolgi
 ## Installation
 
 Use the package manager [pip](https://pip.pypa.io/en/stable/) to install all dependencies.
-Pip 20.3.1, Python 3.9 and virtualenv was used for the development.
+Pip 20.3.1, Python 3.9 and virtualenv on MacOS was used for the development. Please make sure that the pip version is correct before running the commands below:
 
+MacOS/Linux (Terminal)
 ```bash
 git clone https://github.com/AlmaKnudson/flaskProject.git
 cd flaskProject
 virtualenv knock
 source knock/bin/activate
+pip install -r requirements.txt
+python run-app.py
+```
+
+Windows (CMD) -- Please keep in mind that I only checked that it ran once on windows and this is not thoroughly tested
+```bash
+git clone https://github.com/AlmaKnudson/flaskProject.git
+cd flaskProject
+py -m venv env
+.\env\Scripts\activate
 pip install -r requirements.txt
 python run-app.py
 ```
