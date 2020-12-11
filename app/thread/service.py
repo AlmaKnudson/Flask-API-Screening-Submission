@@ -13,7 +13,7 @@ threadsTable = Config.DATABASE["threads"]
 
 class ThreadService:
     @staticmethod
-    def create_thread(json_data) -> None:
+    def create_thread(json_data) -> Any:
         # this section of code is a candidate for refactoring/consolidation
         is_valid = ThreadEntity.validate_json(json_data)
         if is_valid:
@@ -23,6 +23,7 @@ class ThreadService:
             return result.inserted_id
         else:
             current_app.logger.error("JSON WAS INVALID. Will... idk yet.")
+            return None
 
     @staticmethod
     def get_thread_by_id(thread_id) -> Optional[Any]:

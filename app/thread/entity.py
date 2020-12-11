@@ -18,6 +18,7 @@ threadSchema = {
     "required": ["users"]
 }
 
+
 class ThreadEntity:
     @staticmethod
     def validate_json(json_data) -> bool:

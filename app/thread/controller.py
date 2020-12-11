@@ -5,6 +5,7 @@ from app.thread.service import ThreadService
 
 thread = Blueprint('thread', __name__)
 
+
 @thread.route('', methods=['POST'])
 def create_thread():
     json_data = json.loads(request.data)
