@@ -24,7 +24,7 @@ def test_client():
 
 
 @pytest.fixture(scope='module')
-def create_test_thread_id(test_client):
+def create_test_thread(test_client):
     mock_request_headers = {
         "Content-Type": "application/json"
     }
@@ -40,4 +40,4 @@ def create_test_thread_id(test_client):
     response = test_client.post('/thread', data=json.dumps(mock_request_data), headers=mock_request_headers)
     assert response.status_code == 201
     data = json.loads(response.data)
-    yield data['thread_id']
+    yield data['thread_id'], mock_request_data["users"]

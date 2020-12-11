@@ -28,7 +28,7 @@ class MessageService:
         is_valid = MessageEntity.validate_json(json_data)
         if is_valid:
             current_app.logger.debug('Json is valid.')
-            message_thread: Optional[Any] = ThreadService.get_thread_by_id(thread_id)
+            message_thread: Optional[Any] = ThreadService.get_thread_with_id_and_username(thread_id, username)
             if message_thread is not None:
                 current_app.logger.debug('Found corresponding thread for this message. Will save thread in DB.')
                 result = messagesTable.insert_one(json_data)

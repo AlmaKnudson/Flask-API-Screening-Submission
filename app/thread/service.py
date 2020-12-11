@@ -26,9 +26,9 @@ class ThreadService:
             return None
 
     @staticmethod
-    def get_thread_by_id(thread_id) -> Optional[Any]:
+    def get_thread_with_id_and_username(thread_id, username) -> Optional[Any]:
         try:
-            return threadsTable.find_one({"_id": ObjectId(thread_id)})
+            return threadsTable.find_one({"_id": ObjectId(thread_id), "users": {"$elemMatch": {"$eq": username}}})
         except InvalidId as exception:
-            current_app.logger.debug(f'Invalid id was used ({thread_id})')
+            current_app.logger.debug(f'Invalid id or username was used ({thread_id}, {username})')
             return None
