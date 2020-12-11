@@ -1,6 +1,13 @@
 # Getting started
 A simple [Knock Full Stack Screening - Core](https://gist.github.com/marvincolgin/b348800b942d4d56e51e173b099b1e49#file-knock-screening-fullstack-md) implementation.
 
+Flow chart demonstrating how to handle Thread creation:
+![alt text](https://github.com/AlmaKnudson/flaskProject/blob/master/app/resources/flow_charts/create_thread_flow.PNG?raw=true)
+
+
+Flow chart demonstrating how to handle Message creation:
+![alt text](https://github.com/AlmaKnudson/flaskProject/blob/master/app/resources/flow_charts/create_message_flow.PNG?raw=true)
+
 ## Installation
 
 Use the package manager [pip](https://pip.pypa.io/en/stable/) to install all dependencies.
